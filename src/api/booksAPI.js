@@ -5,6 +5,7 @@ const booksApi = axios.create({
   timeout: 2000,
 });
 
+//Encontrar libros, por autor y genero
 export const getBooks = async (author, genre) => {
   const res = await booksApi.get("/");
   let dataRes = res.data.default.library;
